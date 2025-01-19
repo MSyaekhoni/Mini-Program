@@ -10,7 +10,7 @@ def welcome_message():
     print(f"{style}\n")
 
 def exit_program():
-    print("Program akan dihentikan...")
+    print("\nProgram akan dihentikan...")
     sleep(1)
     print('3...')
     sleep(1)
@@ -18,7 +18,7 @@ def exit_program():
     sleep(1)
     print('1...')
     sleep(1)
-    print('Program berhasil berhenti.')
+    print('\nProgram berhasil berhenti.')
     exit()
 
 if __name__ == '__main__':
