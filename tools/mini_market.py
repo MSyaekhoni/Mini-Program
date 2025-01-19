@@ -25,6 +25,16 @@ def add():
     db_minimarket.insert_item(kode_barang, nama_barang, harga_barang, stok_barang)
 
 def check():
-    pass
+    items = db_minimarket.fetch_item()
+    for item in items:
+        kode_barang = item[1]
+        nama_barang = item[2]
+        harga_barang = item[3]
+        stok_barang = item[4]
+        print(f'''
+Kode: {kode_barang}
+{nama_barang} | Rp {harga_barang}
+Stok: {stok_barang}
+''')
 if __name__ == '__main__':
     start()

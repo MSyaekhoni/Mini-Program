@@ -15,3 +15,8 @@ def insert_item(kode_barang, nama_barang, harga_barang, stok_barang):
         print('\nData berhasil disimpan!\n')
     else:
         print('\nData gagal tersimpan!\n')
+
+def fetch_item():
+    cursor = db.cursor()
+    cursor.execute('SELECT * FROM tbl_barang')
+    return cursor.fetchall()
